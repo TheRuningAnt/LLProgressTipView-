@@ -150,7 +150,7 @@
             self.progressValue = 1.0;
         }
         self.labelOfProgress.text = [NSString stringWithFormat:@"%.1f%%",self.progressValue*100];
-        self.progressLayer.strokeEnd = self.progressValue;
+        self.progressLayer.strokeEnd = ((int)(self.progressValue * 100)) / 100.0;
     }
 }
 
